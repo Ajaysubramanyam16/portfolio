@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajay Subramanyam Portfolio</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #5f5c5c;
+            background-image: url('st.jpg'); /* Ensure bg1.jpg is in the same folder */
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        /* Background Overlay to make text visible */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        /* Header Styling */
+        header {
+            background: rgba(209, 246, 243, 0.8);
+            color: #3b3939;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-bottom: 0;
+        }
+
+        /* Profile Image Styling */
+        .profile-image {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #070707;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Navigation Styling */
+        nav {
+            background: rgba(68, 68, 68, 0.8);
+            padding: 15px 0;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: inline-block;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            color: #2b9591;
+        }
+
+        /* Sections Styling */
+        section {
+            padding: 40px 20px;
+            background-color: rgba(184, 182, 182, 0.9); /* Slight transparency */
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            margin: 30px auto;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            text-align: left;
+            color:#151414;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color:#151414;
+            font-size: 2em;
+            border-bottom: 2px solid #2b9591;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .skills-list, .projects-list, .education-list, .interests-list {
+            list-style-type: square;
+            padding-left: 20px;
+            font-size: 1.1em;
+            color: #151414;
+        }
+
+        .skills-list li, .projects-list li, .education-list li, .interests-list li {
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section */
+        #contact p {
+            font-size: 1.2em;
+            text-align: left;
+        }
+
+        #contact a {
+            color: #276462;
+            text-decoration: none;
+        }
+
+        #contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: rgba(51, 51, 51, 0.8);
+            color: #d7cece;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Media Queries for Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .profile-image {
+                width: 120px;
+                height: 120px;
+                top: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            header h1 {
+                font-size: 1.8em;
+                margin-top: 140px;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
+            nav ul {
+                padding-left: 0;
+                text-align: center;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            nav ul li a {
+                font-size: 1.2em;
+            }
+
+            section {
+                width: 95%;
+                padding: 20px;
+            }
+
+            section h2 {
+                font-size: 1.8em;
+            }
+
+            .container {
+                width: 95%;
+                text-align: left;
+            }
+
+            #contact p {
+                font-size: 1em;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="profile-image">
+            <img src="aj photo.jpg" alt="Profile Image"> <!-- Ensure aj_photo.jpg is in the same folder -->
+        </div>
+        <h1>Ajay Subramanyam</h1>
+        <p>Aspiring Software Engineer</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#interests">Interests</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>
+                As an aspiring software developer, I have a strong foundation in
+frontend development, along with skills in C, C++, Python, HTML, CSS,
+JavaScript, and Data Structures and Algorithms. <br><br>I have experience
+designing web applications focused on seamless user experiences and
+am committed to staying updated with emerging technologies.<br><br> I am
+eager to explore opportunities in AI/ML and Data Science while
+contributing creatively and effectively to any team or project with a
+strong drive to help advance organizational goals.
+
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>Frontend Development: HTML, CSS, JavaScript</li>
+                <li>Programming: C, C++, Python</li>
+                <li>Data Structures and Algorithms</li>
+                <li>Project Management</li>
+                <li>Effective Communication & Leadership</li>
+                <li>Critical Thinking & Problem Solving</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <ul class="projects-list">
+                <li><strong>Certificate Generator:</strong> A web-based certificate generator using JavaScript, HTML, and CSS.</li>
+                <li><strong>Attendance Management System:</strong> Efficient attendance management system built with collaboration.</li>
+                <li><strong>QR Code Generator:</strong> A responsive QR code generator using Python.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <ul class="education-list">
+                <li><strong>BE in Information Science Engineering</strong> - Vidyavardhaka College of Engineering, Mysore (CGPA: 9.26)</li>
+                <li><strong>Pre-University (PCMCS)</strong> - Jnanodaya PU College (95.8%)</li>
+                <li><strong>1st to 10th Standard</strong> - Kendriya Vidyalaya Mysore (82.6%)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Personal Interests Section -->
+    <section id="interests">
+        <div class="container">
+            <h2>Personal Interests</h2>
+            <ul class="interests-list">
+                <li><strong>Sports:</strong> I love playing tennis and basketball.</li>
+                <li><strong>Driving:</strong> I enjoy driving and exploring new places.</li>
+                <li><strong>Finance:</strong> I have a keen interest in the stock market and financial strategies.</li>
+                <li><strong>Technology:</strong> Constantly exploring new advancements in AI, Data Science, and Cybersecurity.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:fedal8881@gmail.com">fedal8881@gmail.com</a></p>
+            <p>Phone: 7204807664</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/ajay-subramanyam-886066281" target="_blank">Ajay Subramanyam</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Ajay Subramanyam. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for smooth scrolling -->
+    <script>
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
